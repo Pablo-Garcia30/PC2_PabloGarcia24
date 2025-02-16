@@ -69,3 +69,134 @@ padding: 10px 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.quadrant {
+    border-radius: 20px;
+    padding: 2rem;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    
+  }
+
+  .col-md-6{
+    transition: transform 0.3s ease;
+  }
+  .col-md-6:hover{
+    transform: scale(1.03);
+}
+
+#Circulo{
+    transition: transform 0.3s ease;
+}
+#Circulo:hover{
+    
+    background-color: #fce169;
+    color: white;
+    transform: scale(1.03);
+}
+
+  .fade-in-up {
+    /* Comienzan invisibles y un poco más abajo */
+    opacity: 0;
+    transform: translateY(30px);
+    /* Definimos la animación */
+    animation: fadeInUp 1s ease-in-out forwards;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+   /* Delays diferentes para que aparezcan secuencialmente */
+   .fade-in-up-1 {
+    animation-delay: 0.2s;
+  }
+  .fade-in-up-2 {
+    animation-delay: 0.4s;
+  }
+  .fade-in-up-3 {
+    animation-delay: 0.6s;
+  }
+  .fade-in-up-4 {
+    animation-delay: 0.8s;
+  }
+
+  .position-circle {
+    position: absolute;      
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .circle-center {
+    width: 120px;
+    height: 120px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    opacity: 0; 
+    animation: scaleIn 1s ease-in-out 1.2s forwards; 
+  }
+  @keyframes scaleIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  .circle-center h1 {
+    color: #2e3a48;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 120px;
+    margin: 0;
+  }
+  .dafo-container {
+    position: relative;
+  }
+  @media (max-width: 768px) {
+
+  .position-circle {
+    position: static;          
+        transform: none;           
+        margin: 2rem auto;         
+        display: flex;
+        justify-content: center;  
+  }
+}
+.container{
+    margin-top: 100px;
+}
+
+
+#FodaName {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
