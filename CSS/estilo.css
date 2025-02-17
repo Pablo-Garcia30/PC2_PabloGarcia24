@@ -215,19 +215,6 @@ padding: 10px 10px;
     }
   }
 
-   .introduccion{
-
-    left: 0;
-    animation-name: moveRight ;
-            animation-duration: 2s;
-            
-   }
-
-   @keyframes moveRight {
-    to {
-        left: calc(100% - 50px);
-    }
-}
 
 .wave-container{
   margin-top: 30px;
@@ -364,16 +351,27 @@ body{
   transition:  all .3s;
 }
 
-body::after{
+/* Ocultamos el overlay desplazándolo fuera de la pantalla con transform */
+body::after {
   content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  position: fixed;
-  top: -100vw;
-  left: 0;
   background: #ffffff;
-  transition: all .3s;
+  /* Opcionalmente pon un z-index alto si necesitas que tape todo */
+  z-index: 9999; 
+  /* Lo desplazamos totalmente hacia arriba con transform */
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
+
+/* Cuando el body tenga la clase "loading", mostramos el overlay */
+body.loading::after {
+  transform: translateY(0);
+}
+
 
 .image1 {
   text-align: center;
