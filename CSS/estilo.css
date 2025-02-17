@@ -100,10 +100,9 @@ padding: 10px 10px;
 }
 
   .fade-in-up {
-    /* Comienzan invisibles y un poco más abajo */
+    
     opacity: 0;
     transform: translateY(30px);
-    /* Definimos la animación */
     animation: fadeInUp 1s ease-in-out forwards;
   }
 
@@ -118,7 +117,6 @@ padding: 10px 10px;
     }
   }
 
-   /* Delays diferentes para que aparezcan secuencialmente */
    .fade-in-up-1 {
     animation-delay: 0.2s;
   }
@@ -200,3 +198,190 @@ padding: 10px 10px;
       width: 100%;
     }
   }
+
+  .fadein-up {
+    animation: fadeInUp 1.5s ease-in-out forwards;
+    animation-delay: 0.4s;
+  }
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(40%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+   .introduccion{
+
+    left: 0;
+    animation-name: moveRight ;
+            animation-duration: 2s;
+            
+   }
+
+   @keyframes moveRight {
+    to {
+        left: calc(100% - 50px);
+    }
+}
+
+.wave-container{
+  margin-top: 30px;
+}
+
+.wave-text span {
+    display: inline-block;
+    font-size: 3rem;
+    animation: wave 2s ease-in-out infinite;
+    font-family: 'Arial', sans-serif;
+}
+
+.wave-text span:nth-child(1) {
+    animation-delay: 0s;
+}
+.wave-text span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.wave-text span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+.wave-text span:nth-child(4) {
+    animation-delay: 0.6s;
+}
+.wave-text span:nth-child(5) {
+    animation-delay: 0.6s;
+}
+.wave-text span:nth-child(6) {
+    animation-delay: 0.8s;
+}
+.wave-text span:nth-child(7) {
+    animation-delay: 1.0s;
+}
+.wave-text span:nth-child(8) {
+    animation-delay: 1.2s;
+}
+.wave-text span:nth-child(9) {
+    animation-delay: 1.4s;
+}
+.wave-text span:nth-child(10) {
+    animation-delay: 1.6s;
+}
+.wave-text span:nth-child(11) {
+    animation-delay: 1.8s;
+}
+.wave-text span:nth-child(12) {
+    animation-delay: 2.0s;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+
+.text-part {
+    display: inline-block;
+    position: relative;
+    transform: translateX(0);
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+}
+
+.text-part.left {
+    transform: translateX(-200%);
+    animation-name: slide-in-left;
+}
+
+.text-part.right {
+    transform: translateX(200%);
+    animation-name: slide-in-right;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.maquina-escribir {
+    font-size: 90%;
+    display: block;
+    font-family: monospace;
+    white-space: nowrap; /* los espacios en blanco no rompen la línea */        
+    width: 110ch; /* el ancho será el número de caracteres que tiene nuestra línea */
+    animation: escribiendo 2s steps(20);          
+    overflow: hidden;
+  }
+
+  .cursor{
+    animation: 0.6s parpadeo-cursor infinite;
+  }
+
+  @keyframes escribiendo {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes parpadeo-cursor {
+    50% {
+      opacity: 0;
+    }
+  }
+
+  .fade-in-image { animation: fadeIn 5s; }
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+.loading::after{
+  top: 0;
+}  
+
+body{
+  transition:  all .3s;
+}
+
+body::after{
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: -100vw;
+  left: 0;
+  background: #ffffff;
+  transition: all .3s;
+}
+
+.image1 {
+  text-align: center;
+  
+
+}
+
+.image1:hover{
+  transform: scale(1.50);
+
+}
