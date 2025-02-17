@@ -316,7 +316,7 @@ padding: 10px 10px;
     display: block;
     font-family: monospace;
     white-space: nowrap; /* los espacios en blanco no rompen la línea */        
-    width: 110ch; /* el ancho será el número de caracteres que tiene nuestra línea */
+    width: 50ch; /* el ancho será el número de caracteres que tiene nuestra línea */
     animation: escribiendo 2s steps(20);          
     overflow: hidden;
   }
